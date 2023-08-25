@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<body>
+<a href="/login" style="font-family:Broadway;font-size:30px;">Log in</a>
+<a href="/register" style="font-family:Broadway;font-size:30px;">Register</a>
+<button style="margin-left: 20px" id="log_in">Log In</button>
+<button style="margin-left: 20px" id="register">Register</button>
+</body>
+
+
+<script>
+    function r(s){
+        window.location.replace(s);
+    }
+    const login_butt = document.getElementById('log_in');
+    const register_butt = document.getElementById('register');
+    login_butt.addEventListener("click", function (){r("/login")});
+    register_butt.addEventListener("click", function (){r("/register")});
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <form method="POST" style="text-align:center">
+        <label>USERNAME</label>
+        <input type="text" name="usr" id="usr">
+            <br />
+        <lable>PASSWORD</lable>
+        <input type="text" name="psd" id="psd">
+            <br />
+        <lable>Retype PASSWORD</lable>
+        <input type="text" name="rpsd" id="rpsd">
+            <br />
+        <lable>E-mail</lable>
+        <input type="text" name="email" id="email">
+            <br />
+        <button style="font-family:Broadway;font-size:30px;" id="submit">Submit</button>
+    </form>
+
+
+</body>
+
+<script>
+    const para = document.createElement("p");
+    const submit_butt = document.getElementById('submit');
+    function Is_Valid(){
+        if(document.getElementById("usr").textContent==""||document.getElementById("email").textContent==""){return 1}
+        else if(!document.getElementById('psd').textContent==document.getElementById('rpsd').textContent){return 2}
+        else {return 0}
+    }
+    function check(){
+        
+        switch(Is_Valid()){
+            case 1:
+                para.textContent = "There are sth empty!!";
+                break;
+            case 2:
+                para.textContent = "passwords are not equal!!";
+                break;
+            case 0:
+                break;
+        }
+        document.body.appendChild(para);
+    }
+    
+    submit_butt.addEventListener("click", check);
+
+</script>
+
+
+</html>

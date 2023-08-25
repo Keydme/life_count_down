@@ -1,0 +1,12 @@
+{
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=248",
+        "--extend-ignore=E231,E203,E117,E265,E302,E401,E301,E225,E228,W291,E305,W191,W292,W293,W391" 
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.formatting.provider": "yapf"
+
+
+    
+}
